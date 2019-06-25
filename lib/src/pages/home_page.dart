@@ -1,4 +1,5 @@
-import 'package:componentes/src/pages/alert_page.dart';
+import 'dart:io';
+
 import 'package:componentes/src/providers/menu_provider.dart';
 import 'package:componentes/src/utils/icon_string_util.dart';
 import 'package:flutter/material.dart';
@@ -13,6 +14,12 @@ class HomePage extends StatelessWidget {
         title: Text('Componentes'),
         ),
       body: _lista(),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.exit_to_app),
+        onPressed: (){
+          exit(0);
+        },
+      ),
 
     );
   }
